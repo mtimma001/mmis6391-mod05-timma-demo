@@ -20,6 +20,8 @@ def loan_detail(loan_info_id):
     interest_rate = float(loan_data['interest_rate'])  # Convert interest_rate from Decimal to float
     loan_term_years = int(loan_data['term_years'])  # Convert loan_term_years to int
 
+    # This function has been moved to another file
+
     # Create a function that calculates the loan amortization details
     # def loan_amortization(loan_amount, interest_rate, loan_term_years):
     #     loan_term_months = loan_term_years * 12  # Convert loan term to months

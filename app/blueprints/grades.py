@@ -27,7 +27,9 @@ def grade():
         # else:
         #     letter_grade = "you suck"
 
+        # call the imported function to calculate the letter grade
         letter_grade = calculate_grades(number_grade)
+
         # Insert the new grade info into the database
         cursor.execute('INSERT INTO grades (letter_grade, student_name) VALUES (%s, %s)', (letter_grade, student_name))
         db.commit()
@@ -47,6 +49,7 @@ def update_grade(grade_id):
         # Update the grade's details
         number_grade = request.form['number_grade']
         student_name = request.form['student_name']
+
         # if number_grade >= 90:
         #     letter_grade = "A"
         # elif number_grade >= 80:
@@ -58,7 +61,9 @@ def update_grade(grade_id):
         # else:
         #     letter_grade = "you suck"
 
+        # call the imported function to calculate the letter grade
         letter_grade = calculate_grades(number_grade)
+
         cursor.execute('UPDATE grades SET letter_grade = %s, student_name = %s WHERE grade_id = %s',
                        (letter_grade, student_name, grade_id))
         db.commit()

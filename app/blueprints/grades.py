@@ -16,17 +16,6 @@ def grade():
 
         number_grade = int(number_grade)
 
-        # if number_grade >= 90:
-        #     letter_grade = "A"
-        # elif number_grade >= 80:
-        #     letter_grade = "B"
-        # elif number_grade >= 70:
-        #     letter_grade = "C"
-        # elif number_grade >= 60:
-        #     letter_grade = "D"
-        # else:
-        #     letter_grade = "you suck"
-
         # call the imported function to calculate the letter grade
         letter_grade = calculate_grades(number_grade)
 
@@ -49,17 +38,6 @@ def update_grade(grade_id):
         # Update the grade's details
         number_grade = request.form['number_grade']
         student_name = request.form['student_name']
-
-        # if number_grade >= 90:
-        #     letter_grade = "A"
-        # elif number_grade >= 80:
-        #     letter_grade = "B"
-        # elif number_grade >= 70:
-        #     letter_grade = "C"
-        # elif number_grade >= 60:
-        #     letter_grade = "D"
-        # else:
-        #     letter_grade = "you suck"
 
         # call the imported function to calculate the letter grade
         letter_grade = calculate_grades(number_grade)

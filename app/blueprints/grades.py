@@ -40,7 +40,7 @@ def update_grade(grade_id):
         student_name = request.form['student_name']
 
         # call the imported function to calculate the letter grade
-        letter_grade = calculate_grades(number_grade)
+        letter_grade = calculate_grades(int(number_grade))
 
         cursor.execute('UPDATE grades SET letter_grade = %s, student_name = %s WHERE grade_id = %s',
                        (letter_grade, student_name, grade_id))

@@ -1,13 +1,13 @@
 # Function to calculate the letter grade based on the average of the grades
-def calculate_grades(grades):
-    avg = sum(grades) / len(grades)
-    if avg >= 90:
+def calculate_grades(grade):
+    # avg = sum(grades) / len(grades)
+    if grade >= 90:
         return 'A'
-    elif avg >= 80:
+    elif grade >= 80:
         return 'B'
-    elif avg >= 70:
+    elif grade >= 70:
         return 'C'
-    elif avg >= 60:
+    elif grade >= 60:
         return 'D'
     else:
         return 'F'

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Update Grade</h1>
+
+    <!-- Update Grade Form -->
+    <form method="POST" action="{{ url_for('grades.update_grade', grade_id=current_grade['grade_id']) }}">
+        <div class="form-group mb-3">
+            <label for="student_name">Student Name:</label>
+            <input type="text" id="student_name" name="student_name" class="form-control" value="{{ current_grade['student_name'] }}" required>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="number_grade">New Number Grade:</label>
+            <input type="number" id="number_grade" name="number_grade" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update Grade</button>
+    </form>
+</div>
+
+{% endblock %}
